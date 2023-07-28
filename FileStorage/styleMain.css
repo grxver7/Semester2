@@ -1,0 +1,98 @@
+/* Font Awesome Library */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+
+/* Icon Styles */
+i {
+    cursor: pointer;
+    font-size: 200%;
+    margin-right: 10px;
+}
+
+fieldset{
+    width: 25%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.center {
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+}
+
+/*Icon Container*/
+.icon-container { /*Container properties*/
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 80%;
+}
+
+.icon-wrapper { /*Icon positioning*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+    flex-basis: 15%;
+}
+
+.icon-wrapper i { /*File/Folder IconStyle*/
+    margin-top: 5px;
+    font-size: 300%;
+}
+
+.icon-wrapper span { /*Icon space and break*/
+    margin-top: 5px;
+    word-break: break-all;
+    text-align: center;
+    white-space: normal;
+    margin-bottom: 20px;
+}
+
+/*textEditorField*/
+.textContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.textContainer textarea {
+    height: 500px;
+    width: 90%;
+}
+
+.textContainer button {
+    width: 10%;
+    cursor: pointer;
+}
+
+/*Open Data*/
+.videoContainer video {
+    width: 50%;
+    height: 50%;
+}
+
+/*Action Buttons --> Issue, changing position*/
+.buttonContainer {
+    position: fixed;
+    top: 3%; /* Adjust the vertical position as needed */
+    right: 2%; /* Adjust the horizontal position as needed */
+}
+
+.buttonContainer button {
+    display: block;
+    margin-bottom: 15%;
+}
+
+.buttonContainer i {
+    margin-bottom: 15%;
+}
+
+/* logoutButton style*/
+.logoutContainer {
+    position: fixed;
+    bottom: 5%;
+    right: 3%;
+}
+
+

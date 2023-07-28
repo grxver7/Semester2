@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FileExplorer</title>
+    <link rel="stylesheet" href="styleMain.css">
+    <script src="Authentication.js"></script>
+    <script src="WebsiteDesign.js"></script>
+    <script src="Navigation.js"></script>
+    <script src="Main.js"></script>
+    <script src="DataActions.js"></script>
+    <script src="DataOperations.js"></script>
+</head>
+
+<body>
+<div id="loginContainer">
+    <form class="center" method="post" action="">
+        <fieldset>
+            <legend>Log-In</legend>
+            <br>
+            Username<br>
+            <input type="text" name="user" id="user"><br><br>
+            Password<br>
+            <input type="password" name="pass" id="pass"><br><br>
+            <input type="button" value="Submit" onclick="getAccess()">
+        </fieldset>
+    </form>
+</div>
+
+<div id="content" style="display: none;">
+    <p>
+    <h1>WebExplorer</h1>
+    </p>
+    <p id="pathStatusForWebsite"></p>
+</div>
+</body>
+</html>
