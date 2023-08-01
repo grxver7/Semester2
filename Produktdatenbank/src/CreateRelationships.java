@@ -1,5 +1,5 @@
 public class CreateRelationships {
-    public static void friendship(String personReaderID, String friendReaderID) { //create friendrelationship
+    public static void friendship(String personReaderID, String friendReaderID) { //create relationships between person object
         int idPerson=Integer.parseInt(personReaderID);
         int idFriend=Integer.parseInt(friendReaderID);
         Person person = ObjectsDB.personMap.get(idPerson);
@@ -21,7 +21,7 @@ public class CreateRelationships {
         ObjectsDB.productMap.replace(idProduct, product);
         ObjectsDB.companyMap.replace(idCompany, company);
     }
-    public static void productStorage(String personReaderID, String productReaderID){ //shows what the person already bought
+    public static void productStorage(String personReaderID, String productReaderID){ //creates relationship between person and product
         int idProduct=Integer.parseInt(productReaderID);
         int idPerson=Integer.parseInt(personReaderID);
         Product product = ObjectsDB.productMap.get(idProduct);

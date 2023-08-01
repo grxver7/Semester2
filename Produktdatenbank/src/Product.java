@@ -1,7 +1,7 @@
 import java.util.*;
 public class Product extends Company {
-    int ID;
-    String Name;
+    int id;
+    String name;
     List<Integer> isBoughtBy = new LinkedList<>();
     int isOwnedBy;
 }

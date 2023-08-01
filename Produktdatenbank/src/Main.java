@@ -7,8 +7,11 @@ enum Gender {
 
 public class Main {
     public static void main(String[] args) {
+        //Data to object
         String file = "database.csv";
-        DataReader.dataReader(file);
+        ReadData.dataReader(file);
+
+        //DataInteractions based on the given arguments when calling this program
         if (args.length!=1) {
             System.out.println("Error reading argument!");
             return;

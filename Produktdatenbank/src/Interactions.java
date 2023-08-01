@@ -1,5 +1,7 @@
 import java.util.*;
 
+
+//4 Methods for interactions with the data
 public class Interactions {
     public static String searchPerson(String input) {
         input = input.toLowerCase();
@@ -9,7 +11,7 @@ public class Interactions {
         boolean checkID = false;
         for (Map.Entry<Integer, Person> entry : ObjectsDB.personMap.entrySet()) {
             Person personToCompare = entry.getValue();
-            String comparePerson = personToCompare.Name;
+            String comparePerson = personToCompare.name;
             comparePerson = comparePerson.toLowerCase();
             String[] cutInput;
             String[] cutCompare;
@@ -17,23 +19,30 @@ public class Interactions {
             cutCompare = comparePerson.split(" ");
             for (String element1 : cutCompare) {
                 for (String element2 : cutInput) {
-                    if (safeID.contains(personToCompare.ID)) {
+                    if (safeID.contains(personToCompare.id)) {
                         checkID = true;
                     }
                     if (element1.startsWith(element2) && !checkID) {
                         answer="Person " + count + ":";
-                        answer+="\nPersonID: " + personToCompare.ID;
-                        answer+="\nPersonName: " + personToCompare.Name;
+                        answer+="\nPersonID: " + personToCompare.id;
+                        answer+="\nPersonName: " + personToCompare.name;
                         answer+="\nGender: " + personToCompare.Gender;
                         answer+="\nFriend with (ID): " + personToCompare.isFriend;
                         answer+="\nBought Product (ID): " + personToCompare.boughtProduct;
                         System.out.println(answer+"\n");
-                        safeID.add(personToCompare.ID);
+                        safeID.add(personToCompare.id);
                         count++;
                     }
                     checkID=false;
                 }
             }
+
+
+
+
+
+
+
         }
         if (count == 0) {
             answer="Person don't exists in this storage";
@@ -48,14 +57,14 @@ public class Interactions {
         input = input.toLowerCase();
         for (Map.Entry<Integer, Product> entry : ObjectsDB.productMap.entrySet()) {
             Product productToCompare = entry.getValue();
-            String compare = productToCompare.Name;
+            String compare = productToCompare.name;
             compare = compare.toLowerCase();
             if (compare.startsWith(input)) {
                 //Checkout: System.out.println("The key for value " + input + " is " + entry.getKey());
                 Product product = ObjectsDB.productMap.get(entry.getKey());
                 answer="Product " + counter + ": ";
-                answer+= "\nProductID: " + product.ID;
-                answer+="\nProductName: " + product.Name;
+                answer+= "\nProductID: " + product.id;
+                answer+="\nProductName: " + product.name;
                 answer+="\nOwner (ID): " + product.isOwnedBy;
                 answer+="\nBought by (ID): " + product.isBoughtBy;
                 System.out.println(answer+"\n");
@@ -86,7 +95,7 @@ public class Interactions {
             for (int productID : friend.boughtProduct) {
                 if (!checkProductReplications.contains(productID)&&!checkProductPersonAlreadyHas.contains(productID)) {
                     product = ObjectsDB.productMap.get(productID);
-                    mapOfProducts.put(productID, product.Name);
+                    mapOfProducts.put(productID, product.name);
                     checkProductReplications.add(productID);
                     checkIDExistence = true;
                 }
@@ -115,7 +124,7 @@ public class Interactions {
             int companyID = product.isOwnedBy;
             company = ObjectsDB.companyMap.get(companyID);
             if (!checkDoubledID.contains(companyID)) {
-                listOfCompany.add(company.Name);
+                listOfCompany.add(company.name);
                 checkDoubledID.add(companyID);
                 checkIDExistence = true;
             }

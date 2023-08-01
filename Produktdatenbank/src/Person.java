@@ -1,8 +1,8 @@
 import java.util.*;
 
 public class Person {
-    int ID;
-    String Name;
+    int id;
+    String name;
     Gender Gender;
     List<Integer> isFriend = new LinkedList<>();
     List<Integer> boughtProduct = new LinkedList<>();

@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>920</x>
+      <y>170</y>
+      <w>110</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Main
+--
+--
++main(String[])</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>560</x>
+      <y>460</y>
+      <w>170</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>Gender
+--
++Female
++Male
+--
++values(): Gender[ ]
++valueOf(String): Gender</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>530</x>
+      <y>140</y>
+      <w>240</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Company
+--
+-id: int
+-name: string
+-ownsProduct: LinkedList &lt;Integer&gt;
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>530</x>
+      <y>590</y>
+      <w>240</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>+Product
+--
+-id: int
+-name: string
+-isBoughtBy: LinkedList &lt;Integer&gt;
+-isOwnedBy: int
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>530</x>
+      <y>250</y>
+      <w>240</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Person
+--
+-id: int
+-name: string
+-Gender: Gender
+-boughtProduct: LinkedList &lt;Integer&gt;
+-isFriend: LinkedList &lt;Integer&gt;
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>70</x>
+      <y>20</y>
+      <w>200</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes>Tests()
+--
+--
++creatTestObjectName()
++createFriend()
++creatTestObjectProduct()
++creatFriendProduct()
++createSecondTestCompany()
++createTestCompany()
+-testExistingName()
+-testNotExistingName()
+-testExistingProduct()
+-testNotExistingProduct()
+-testProductNetwork()
+-testFirmNetwork()
+-testImport()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>290</y>
+      <w>290</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>ObjectDB
+--
++personMap:HashMap&lt;Integer,Person&gt;
++productMap:HashMap&lt;Integer,Product&gt;
++companyMap:HashMap&lt;Integer,Company&gt;
+--
++createProduct(String, String)
++createPerson(String, String, String)
++createCompany(String, String)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>920</x>
+      <y>440</y>
+      <w>310</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>Interactions
+--
+--
++searchPersom(String):String
++searchProduct(String):String
++productNetwork(int):HashMap&lt;Integer, String&gt;
++firmNetwork(int):List&lt;String&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>920</x>
+      <y>340</y>
+      <w>220</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>CreateRelationships
+--
+--
++productPortfolio(String, String)
++productStorage(String, String)
++friendship(String, String)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>920</x>
+      <y>240</y>
+      <w>220</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>ReadData
+--
+--
+-cutterInput(String):String[ ]
+-identifyInputs(Strings)
++dataReader</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>320</x>
+      <y>320</y>
+      <w>230</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=*</panel_attributes>
+    <additional_attributes>10.0;40.0;130.0;10.0;210.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>320</x>
+      <y>220</y>
+      <w>270</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=*</panel_attributes>
+    <additional_attributes>10.0;100.0;110.0;40.0;250.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>320</x>
+      <y>380</y>
+      <w>230</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=*</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;40.0;210.0;210.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>260</x>
+      <y>100</y>
+      <w>570</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>510.0;90.0;540.0;80.0;550.0;60.0;500.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>260</x>
+      <y>60</y>
+      <w>610</w>
+      <h>600</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>510.0;580.0;590.0;220.0;590.0;90.0;510.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>320</x>
+      <y>200</y>
+      <w>230</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>210.0;10.0;110.0;40.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>320</x>
+      <y>300</y>
+      <w>230</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>210.0;10.0;130.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>320</x>
+      <y>400</y>
+      <w>230</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>210.0;220.0;60.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>260</x>
+      <y>80</y>
+      <w>590</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>510.0;230.0;570.0;200.0;570.0;80.0;500.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>640</x>
+      <y>360</y>
+      <w>40</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
